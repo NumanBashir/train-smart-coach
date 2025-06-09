@@ -1,21 +1,24 @@
+import { NextRequest, NextResponse } from "next/server";
 import Drill from "@/models/drill";
 import { connectToDB } from "@/utils/db";
-export const GET = async (request: any) => {
+
+export async function GET(_req: NextRequest) {
   try {
     await connectToDB();
 
-    const drills = await Drill.find({});
+    // lean() = plain JS objects (faster, smaller)
+    const drills = await Drill.find().lean();
 
-    // Format the date to MM/dd/yyyy
-    const formattedDrills = drills.map((drill) => {
-      return {
-        ...drill.toObject(),
-      };
-    });
+    const formatted = drills.map((d) => ({
+      ...d,
+    }));
 
-    return new Response(JSON.stringify(formattedDrills), { status: 200 });
-  } catch (error) {
-    console.error("Error fetching drills:", error);
-    return new Response("Failed to fetch all drills", { status: 500 });
+    return NextResponse.json(formatted, { status: 200 });
+  } catch (err: any) {
+    console.error("Error fetching drills:", err);
+    return NextResponse.json(
+      { message: "Failed to fetch drills" },
+      { status: 500 }
+    );
   }
-};
+}

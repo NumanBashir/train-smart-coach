@@ -6,8 +6,9 @@ import mongoose from "mongoose";
 // GET by id
 export async function GET(
   _req: NextRequest,
-  { params }: { params: { id: string } }
+  props: { params: Promise<{ id: string }> }
 ) {
+  const params = await props.params;
   if (!mongoose.Types.ObjectId.isValid(params.id)) {
     return NextResponse.json({ message: "Invalid ID" }, { status: 400 });
   }
@@ -26,8 +27,9 @@ export async function GET(
 // UPDATE by id
 export async function PATCH(
   req: NextRequest,
-  { params }: { params: { id: string } }
+  props: { params: Promise<{ id: string }> }
 ) {
+  const params = await props.params;
   if (!mongoose.Types.ObjectId.isValid(params.id)) {
     return NextResponse.json({ message: "Invalid ID" }, { status: 400 });
   }
@@ -48,3 +50,21 @@ export async function PATCH(
 }
 
 // DELETE by id
+export async function DELETE(
+  _req: NextRequest,
+  props: { params: Promise<{ id: string }> }
+) {
+  const params = await props.params;
+  if (!mongoose.Types.ObjectId.isValid(params.id)) {
+    return NextResponse.json({ message: "Invalid ID" }, { status: 400 });
+  }
+
+  await connectToDB();
+  const removed = await Drill.findByIdAndDelete(params.id);
+
+  if (!removed) {
+    return NextResponse.json({ message: "Drill not found" }, { status: 404 });
+  }
+
+  return NextResponse.json({ message: "Drill deleted" }, { status: 200 });
+}

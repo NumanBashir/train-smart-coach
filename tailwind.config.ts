@@ -9,8 +9,17 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        brand: {
+          DEFAULT: "#407734",
+          light: "#F3DF76",
+          dark: "#2B4A11",
+          bg: "#FAFDEB",
+          accent: "#D0CC75",
+        },
+      },
+      fontFamily: {
+        lato: ["Lato", "sans-serif"],
+        oswald: ["Oswald", "sans-serif"],
       },
     },
   },

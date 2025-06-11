@@ -1,21 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Font setup */
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Lato', sans-serif;
+  background-color: #FAFDEB;
+  color: #2B4A11;
+}
+
+/* Reusable container layout */
+.main {
+  width: 100vw;
+  min-height: 100vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  padding: 120px 24px 160px 24px;
+  pointer-events: none;
+}
+
+.app {
+  @apply relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto sm:px-16 px-6;
+}
+
+/* Headings and text */
+.head_text {
+  @apply text-4xl sm:text-5xl font-extrabold text-[#2B4A11] leading-tight;
+}
+
+.desc {
+  @apply mt-4 text-lg text-[#2B4A11]/80 sm:text-xl max-w-3xl text-center;
+}
+
+/* Utility layout classes */
+.flex-center {
+  @apply flex justify-center items-center;
+}
+
+.flex-start {
+  @apply flex justify-start items-start;
+}
+
+.flex-end {
+  @apply flex justify-end items-center;
+}
+
+.flex-between {
+  @apply flex justify-between items-center;
+}
+
+/* === Brand Colors === */
+:root {
+  --brand-primary: #407734;
+  --brand-bg: #FAFDEB;
+  --brand-yellow: #F3DF76;
+  --brand-yellow-dark: #D0CC75;
+  --brand-dark: #2B4A11;
+}
+
+/* === Gradient Text === */
+.train_gradient {
+  @apply bg-gradient-to-r from-[#407734] via-[#D0CC75] to-[#F3DF76] bg-clip-text text-transparent;
+}
+
+/* === Buttons === */
+.btn {
+  @apply inline-flex items-center justify-center px-5 py-2 rounded-full font-medium text-sm transition-all duration-300;
+}
+
+.btn-primary {
+  @apply btn bg-[--brand-primary] text-white hover:bg-[#2B4A11] border border-[#2B4A11];
+}
+
+.btn-secondary {
+  @apply btn bg-[--brand-yellow] text-[#2B4A11] hover:bg-[#f0d359] border border-[#2B4A11];
+}
+
+.btn-outline {
+  @apply btn bg-transparent text-[#2B4A11] border border-[#2B4A11] hover:bg-[#f2fbc6];
+}
+
+.btn-gradient {
+  @apply btn bg-gradient-to-r from-[#407734] via-[#D0CC75] to-[#F3DF76] text-white hover:brightness-110;
+}
+
+/* === Forms === */
+.form_input {
+  @apply w-full rounded-lg mt-2 p-3 text-sm text-[#2B4A11] bg-white border border-[#D0CC75] focus:outline-none focus:ring-2 focus:ring-[#407734];
+}
+
+.form_textarea {
+  @apply form_input h-[120px] resize-none;
+}
+
+/* === Glassmorphism box (optional) === */
+.glassmorphism {
+  @apply rounded-xl bg-white/50 border border-[#D0CC75]/40 backdrop-blur p-5 shadow-md;
 }

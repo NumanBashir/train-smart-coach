@@ -2,6 +2,8 @@
 
 // Brand setting globals.css
 
+// Next Auth
+
 Nusuq5Z77xBPXz57
 
 MONGODB_URI=mongodb+srv://sportybashir:Nusuq5Z77xBPXz57@trainsmartcoachcluster.nnjbgfj.mongodb.net/?retryWrites=true&w=majority&appName=TrainSmartCoachCluster

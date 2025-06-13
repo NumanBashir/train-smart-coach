@@ -4,6 +4,14 @@
 
 // Next Auth
 
+// Build out landing page
+// Hero section
+// USPs
+// Clubs using the app
+// 16:9 text image banner
+// Nav bar
+
+
 Nusuq5Z77xBPXz57
 
 MONGODB_URI=mongodb+srv://sportybashir:Nusuq5Z77xBPXz57@trainsmartcoachcluster.nnjbgfj.mongodb.net/?retryWrites=true&w=majority&appName=TrainSmartCoachCluster

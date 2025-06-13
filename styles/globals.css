@@ -29,7 +29,7 @@ body {
 
 /* Headings and text */
 .head_text {
-  @apply text-4xl sm:text-5xl font-extrabold text-[#2B4A11] leading-tight;
+  @apply text-4xl sm:text-5xl font-oswald text-[#2B4A11];
 }
 
 .desc {

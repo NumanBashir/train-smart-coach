@@ -19,10 +19,13 @@ const Hero = () => {
 
       {/* Content */}
       <div className="z-10 max-w-3xl text-center px-4">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight">
-          BE PART <br />
-          <span className="text-green-500">OF THE GAME</span>
-        </h1>
+        <div className="bg-gray-400">
+          <h1 className="font-oswald text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight">
+            BE PART <br />
+            <span className="text-[#407734]">OF THE GAME</span>
+          </h1>
+        </div>
+
         <p className="mt-6 text-lg text-gray-200">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed diam
           nonummy nibh euismod tincidunt ut laoreet.

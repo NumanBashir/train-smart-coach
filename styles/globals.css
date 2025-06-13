@@ -24,7 +24,7 @@ body {
 }
 
 .app {
-  @apply relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto sm:px-16 px-6;
+  @apply relative z-10 flex justify-center items-center flex-col mx-auto;
 }
 
 /* Headings and text */
@@ -72,19 +72,19 @@ body {
   @apply inline-flex items-center justify-center px-5 py-2 rounded-full font-medium text-sm transition-all duration-300;
 }
 
-.btn-primary {
+.btn_primary {
   @apply btn bg-[--brand-primary] text-white hover:bg-[#2B4A11] border border-[#2B4A11];
 }
 
-.btn-secondary {
+.btn_secondary {
   @apply btn bg-[--brand-yellow] text-[#2B4A11] hover:bg-[#f0d359] border border-[#2B4A11];
 }
 
-.btn-outline {
+.btn_outline {
   @apply btn bg-transparent text-[#2B4A11] border border-[#2B4A11] hover:bg-[#f2fbc6];
 }
 
-.btn-gradient {
+.btn_gradient {
   @apply btn bg-gradient-to-r from-[#407734] via-[#D0CC75] to-[#F3DF76] text-white hover:brightness-110;
 }
 

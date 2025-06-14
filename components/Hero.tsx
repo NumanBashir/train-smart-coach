@@ -3,45 +3,26 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <section className="relative w-full h-[90vh] flex items-center justify-center text-white">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/assets/training1.png" // Place your image in /public and name it hero-bg.jpg
-          alt="Football Player"
-          fill
-          className="object-cover"
-          priority
-        />
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black/40" />
-      </div>
-
-      {/* Content */}
-      <div className="z-10 max-w-3xl text-center px-4">
-        <div className="bg-gray-400">
-          <h1 className="font-oswald text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight">
-            BE PART <br />
-            <span className="text-[#407734]">OF THE GAME</span>
-          </h1>
-        </div>
-
-        <p className="mt-6 text-lg text-gray-200">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed diam
-          nonummy nibh euismod tincidunt ut laoreet.
-        </p>
-
-        {/* Buttons */}
-        <div className="mt-8 flex justify-center gap-4 flex-wrap">
-          <button className="btn bg-[#407734] text-white hover:bg-[#2B4A11] px-6 py-2 rounded-full">
-            LOGIN
-          </button>
-          <button className="btn bg-gray-700 text-white hover:bg-gray-600 px-6 py-2 rounded-full">
-            CREATE ACCOUNT
-          </button>
+    <div
+      className="hero min-h-screen"
+      style={{
+        backgroundImage: "url('/assets/training1.png')",
+      }}
+    >
+      <div className="hero-overlay"></div>
+      <div className="hero-content text-neutral-content text-center justify-center">
+        <div className="max-w-2xl">
+          <h1 className="mb-5 text-7xl font-bold">TrainSmartCoach</h1>
+          <p className="mb-5 text-lg">
+            TrainSmartCoach is a web application designed to help coaches and
+            athletes manage training sessions, track performance, and enhance
+            overall athletic development. It provides tools for creating drills,
+            monitoring progress, and optimizing training routines.
+          </p>
+          <button className="btn btn_primary">JOIN NOW</button>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

@@ -112,15 +112,15 @@ body {
 }
 
 .btn_primary {
-  @apply btn bg-[--brand-primary] text-white hover:bg-[#2B4A11];
+  @apply btn bg-[--brand-primary] text-white hover:bg-[#2B4A11] border-none outline-none ring-0;
 }
 
 .btn_secondary {
-  @apply btn bg-[--brand-yellow] text-[#2B4A11] hover:bg-[#f0d359] border border-[#2B4A11];
+  @apply btn bg-[--brand-yellow] text-[#2B4A11] hover:bg-[#f0d359];
 }
 
 .btn_outline {
-  @apply btn bg-transparent text-[#2B4A11] border border-[#2B4A11] hover:bg-[#f2fbc6];
+  @apply btn bg-transparent text-[#2B4A11] hover:bg-[#f2fbc6];
 }
 
 .btn_gradient {

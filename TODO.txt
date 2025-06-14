@@ -9,7 +9,7 @@
 // USPs
 // Clubs using the app
 // 16:9 text image banner
-// Nav bar
+// Nav bar (maybe sticy)
 
 
 Nusuq5Z77xBPXz57

@@ -4,7 +4,6 @@ import Hero2 from "@/components/Hero2";
 export default function Home() {
   return (
     <>
-      {/* <Hero2 /> */}
       <Hero />
       <div className="flex flex-col items-center gap-y-4 mt-10">
         <h1 className="head_text">TrainSmartCoach</h1>

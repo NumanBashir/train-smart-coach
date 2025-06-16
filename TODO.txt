@@ -2,11 +2,11 @@
 
 // Brand setting globals.css
 
-// Next Auth
+// Next Auth / Auth.js
 
 // Build out landing page
 // Hero section
-// USPs
+// USPs / Feautred 
 // Clubs using the app
 // 16:9 text image banner
 // Nav bar (maybe sticy)

@@ -14,13 +14,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" data-theme="light">
       <body>
         <div className="main">
           <div className="gradient" />
         </div>
         <main className="app">
-          <Navbar />
+          {/* <Navbar /> */}
           {children}
         </main>
       </body>

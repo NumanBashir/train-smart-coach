@@ -15,12 +15,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-theme="light">
-      <body>
+      <body cz-shortcut-listen="true">
         <div className="main">
           <div className="gradient" />
         </div>
         <main className="app">
-          {/* <Navbar /> */}
+          <Navbar />
           {children}
         </main>
       </body>

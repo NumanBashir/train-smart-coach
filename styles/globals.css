@@ -5,10 +5,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@plugin "daisyui" {
-  themes: light --default;
-}
-
 /* === Brand Colors === */
 :root {
   --brand-primary: #407734;

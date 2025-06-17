@@ -4,8 +4,8 @@ import Image from "next/image";
 const USP = () => {
   const clubs = [
     { src: "/assets/chelsea.png", alt: "Chelsea" },
-    { src: "/assets/realmadrid.png", alt: "Real Madrid" },
     { src: "/assets/barcelona.png", alt: "Barcelona" },
+    { src: "/assets/chelsea.png", alt: "Real Madrid" },
   ];
 
   // const clubs = [

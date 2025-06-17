@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-const USP = () => {
+const FeaturedClubs = () => {
   const clubs = [
     { src: "/assets/chelsea.png", alt: "Chelsea" },
     { src: "/assets/barcelona.png", alt: "Barcelona" },
@@ -31,7 +31,7 @@ const USP = () => {
           {clubs.map((club, index) => (
             <div
               key={index}
-              className="w-[120px] h-[120px] relative grayscale opacity-40 hover:opacity-100 hover:grayscale-0 transition-all duration-300"
+              className="w-[120px] h-[120px] relative grayscale opacity-40 hover:opacity-100 hover:grayscale-0 hover:scale-105 transition-all duration-300"
             >
               <Image
                 src={club.src}
@@ -48,4 +48,4 @@ const USP = () => {
   );
 };
 
-export default USP;
+export default FeaturedClubs;

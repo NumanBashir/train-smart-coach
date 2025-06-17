@@ -3,10 +3,21 @@ import Image from "next/image";
 
 const USP = () => {
   const clubs = [
-    { src: "/assets/fck.png", alt: "F.C. København" },
+    { src: "/assets/chelsea.png", alt: "Chelsea" },
     { src: "/assets/realmadrid.png", alt: "Real Madrid" },
-    { src: "/assets/fck.png", alt: "F.C. København" },
+    { src: "/assets/barcelona.png", alt: "Barcelona" },
   ];
+
+  // const clubs = [
+  //   { src: "/assets/chelsea.png", alt: "Chelsea", width: 100, height: 100 },
+  //   {
+  //     src: "/assets/realmadrid.png",
+  //     alt: "Real Madrid",
+  //     width: 100,
+  //     height: 100,
+  //   },
+  //   { src: "/assets/barcelona.png", alt: "Barcelona", width: 100, height: 100 },
+  // ];
 
   return (
     <section className="py-16">
@@ -20,12 +31,13 @@ const USP = () => {
           {clubs.map((club, index) => (
             <div
               key={index}
-              className="w-[120px] h-[80px] relative grayscale opacity-40 hover:opacity-100 hover:grayscale-0 transition-all duration-300"
+              className="w-[120px] h-[120px] relative grayscale opacity-40 hover:opacity-100 hover:grayscale-0 transition-all duration-300"
             >
               <Image
                 src={club.src}
                 alt={club.alt}
-                fill
+                width={120}
+                height={120}
                 className="object-contain"
               />
             </div>

@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 let isConnected = false;
-let MONGODB_URI = "mongodb+srv://sportybashir:Nusuq5Z77xBPXz57@trainsmartcoachcluster.nnjbgfj.mongodb.net/?retryWrites=true&w=majority&appName=TrainSmartCoachCluster"
+const MONGODB_URI = process.env.MONGODB_URI;
 
 export const connectToDB = async () => {
   console.log("Connecting to MongoDB...");

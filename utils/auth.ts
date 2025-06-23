@@ -4,10 +4,7 @@ import { connectToMONGO } from "@/utils/database";
 import { User } from "@/models/User";
 import { verifyPassword } from "@/utils/password";
 
-export const {
-  handlers: { GET, POST },
-  auth,
-} = NextAuth({
+const authOptions = {
   providers: [
     Credentials({
       credentials: {
@@ -17,16 +14,15 @@ export const {
       async authorize(credentials) {
         await connectToMONGO();
 
-        const user = await User.findOne({ email: credentials?.email });
+        if (!credentials?.email || !credentials?.password) return null;
 
-        if (
-          !user ||
-          !credentials ||
-          typeof credentials.password !== "string" ||
-          !verifyPassword(credentials.password, user.password)
-        ) {
-          return null;
-        }
+        const user = await User.findOne({ email: credentials.email });
+        const isValid =
+          user &&
+          typeof credentials.password === "string" &&
+          (await verifyPassword(credentials.password, user.password));
+
+        if (!user || !isValid) return null;
 
         return {
           id: user._id.toString(),
@@ -40,16 +36,22 @@ export const {
     signIn: "/login",
   },
   session: {
-    strategy: "jwt",
+    strategy: "jwt" as const,
   },
   callbacks: {
-    async jwt({ token, user }) {
+    async jwt({ token, user }: { token: any; user?: any }) {
       if (user) token.user = user;
       return token;
     },
-    async session({ session, token }) {
-      session.user = token.user as any;
+    async session({ session, token }: { session: any; token: any }) {
+      session.user = token.user;
       return session;
     },
   },
-});
+  secret: process.env.AUTH_SECRET,
+};
+
+export const {
+  handlers: { GET, POST },
+  auth, // for use in server/middleware
+} = NextAuth(authOptions);

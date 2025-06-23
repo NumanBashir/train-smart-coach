@@ -1,5 +1,5 @@
 import { connectToMONGO } from "@/utils/database";
-import { User } from "@/models/user";
+import { User } from "@/models/User";
 import { hashPassword } from "@/utils/password";
 
 export async function POST(req: Request) {

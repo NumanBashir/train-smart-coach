@@ -1,10 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 import Drill from "@/models/drill";
-import { connectToDB } from "@/utils/db";
+import { connectToMONGO } from "@/utils/database";
 
 export async function GET(_req: NextRequest) {
   try {
-    await connectToDB();
+    await connectToMONGO();
 
     // lean() = plain JS objects (faster, smaller)
     const drills = await Drill.find().lean();

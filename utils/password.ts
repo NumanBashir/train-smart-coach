@@ -1,15 +1,9 @@
 import bcrypt from "bcryptjs";
 
-// Hash a password with salt
-export function saltAndHashPassword(password: string): string {
-  const salt = bcrypt.genSaltSync(10);
-  return bcrypt.hashSync(password, salt);
-}
+export const hashPassword = (password: string) => {
+  return bcrypt.hashSync(password, 10);
+};
 
-// Compare input password with hashed password
-export function verifyPassword(
-  inputPassword: string,
-  hashedPassword: string
-): boolean {
-  return bcrypt.compareSync(inputPassword, hashedPassword);
-}
+export const verifyPassword = (password: string, hash: string) => {
+  return bcrypt.compareSync(password, hash);
+};

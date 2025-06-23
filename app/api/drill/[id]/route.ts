@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import Drill from "@/models/drill";
-import { connectToDB } from "@/utils/db";
+import { connectToMONGO } from "@/utils/database";
 import mongoose from "mongoose";
 
 // GET by id
@@ -14,7 +14,7 @@ export async function GET(
   }
 
   const { id } = await params;
-  await connectToDB();
+  await connectToMONGO();
   const drill = await Drill.findById(params.id).lean();
 
   if (!drill) {
@@ -36,7 +36,7 @@ export async function PATCH(
 
   const body = await req.json();
 
-  await connectToDB();
+  await connectToMONGO();
   const updated = await Drill.findByIdAndUpdate(params.id, body, {
     new: true,
     runValidators: true,
@@ -59,7 +59,7 @@ export async function DELETE(
     return NextResponse.json({ message: "Invalid ID" }, { status: 400 });
   }
 
-  await connectToDB();
+  await connectToMONGO();
   const removed = await Drill.findByIdAndDelete(params.id);
 
   if (!removed) {

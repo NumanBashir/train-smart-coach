@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "@/styles/globals.css";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "TrainSmartCoach",
@@ -22,6 +23,7 @@ export default function RootLayout({
         <main className="app">
           <Navbar />
           {children}
+          <Footer />
         </main>
       </body>
     </html>

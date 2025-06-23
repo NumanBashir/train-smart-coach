@@ -15,6 +15,7 @@
 Nusuq5Z77xBPXz57
 
 MONGODB_URI=mongodb+srv://sportybashir:Nusuq5Z77xBPXz57@trainsmartcoachcluster.nnjbgfj.mongodb.net/?retryWrites=true&w=majority&appName=TrainSmartCoachCluster
+AUTH_SECRET="jdnrFX1Mm6N7d2w87LX3l6wvMJq5TX4hDoUoxdiiKu4="
 
 Commands to remember
 npm i next@canary

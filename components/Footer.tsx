@@ -24,23 +24,23 @@ const Footer = () => {
       </aside>
       <nav>
         <h6 className="footer-title">Services</h6>
-        <a className="link link-hover">Branding</a>
-        <a className="link link-hover">Design</a>
-        <a className="link link-hover">Marketing</a>
-        <a className="link link-hover">Advertisement</a>
+        <a className="link link-hover" href="#">Branding</a>
+        <a className="link link-hover" href="#">Design</a>
+        <a className="link link-hover" href="#">Marketing</a>
+        <a className="link link-hover" href="#">Advertisement</a>
       </nav>
       <nav>
         <h6 className="footer-title">Company</h6>
-        <a className="link link-hover">About us</a>
-        <a className="link link-hover">Contact</a>
-        <a className="link link-hover">Jobs</a>
-        <a className="link link-hover">Press kit</a>
+        <a className="link link-hover" href="#">About us</a>
+        <a className="link link-hover" href="#">Contact</a>
+        <a className="link link-hover" href="#">Jobs</a>
+        <a className="link link-hover" href="#">Press kit</a>
       </nav>
       <nav>
         <h6 className="footer-title">Legal</h6>
-        <a className="link link-hover">Terms of use</a>
-        <a className="link link-hover">Privacy policy</a>
-        <a className="link link-hover">Cookie policy</a>
+        <a className="link link-hover" href="#">Terms of use</a>
+        <a className="link link-hover" href="#">Privacy policy</a>
+        <a className="link link-hover" href="#">Cookie policy</a>
       </nav>
     </footer>
   );

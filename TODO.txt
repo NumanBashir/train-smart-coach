@@ -5,12 +5,11 @@
 // Next Auth / Auth.js
 
 // Build out landing page
-// Hero section
+// Hero section ✅
 // USPs / Feautred 
-// Clubs using the app
+// Clubs using the app ✅
 // 16:9 text image banner
 // Nav bar (maybe sticy)
-
 
 
 Nusuq5Z77xBPXz57

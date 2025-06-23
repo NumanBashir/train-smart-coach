@@ -12,7 +12,9 @@ const Hero = () => {
       <div className="hero-overlay"></div>
       <div className="hero-content text-neutral-content text-center justify-center">
         <div className="max-w-2xl">
-          <h1 className="mb-5 text-7xl font-bold">TrainSmartCoach</h1>
+          <h1 className="mb-5 text-7xl font-bold">
+            Welcome to TrainSmartCoach
+          </h1>
           <p className="mb-5 text-lg">
             TrainSmartCoach is a web application designed to help coaches and
             athletes manage training sessions, track performance, and enhance

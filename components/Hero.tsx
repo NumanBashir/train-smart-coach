@@ -21,7 +21,9 @@ const Hero = () => {
             overall athletic development. It provides tools for creating drills,
             monitoring progress, and optimizing training routines.
           </p>
-          <button className="btn btn_primary">JOIN NOW</button>
+          <button className="btn btn_primary">
+            <a href="/login">JOIN NOW</a>
+          </button>
         </div>
       </div>
     </div>

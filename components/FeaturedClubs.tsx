@@ -5,7 +5,7 @@ const FeaturedClubs = () => {
   const clubs = [
     { src: "/assets/chelsea.png", alt: "Chelsea" },
     { src: "/assets/barcelona.png", alt: "Barcelona" },
-    { src: "/assets/chelsea.png", alt: "Real Madrid" },
+    // { src: "/assets/chelsea.png", alt: "Real Madrid" },
   ];
 
   // const clubs = [

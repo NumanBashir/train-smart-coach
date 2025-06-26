@@ -1,0 +1,9 @@
+Day 11 - ImageHeaderTextBlock right side and props for TrainSmartCoach ⚽️
+
+✅ Added ImageHeaderTextBlock right side
+✅ Mobile responsiveness with two blocks placed after eachother
+
+So I had this issue that on mobile device it would be image-image when two blocks would be placed after eachother
+Used React props to make sure this is fixed for where I want to use them
+
+#buildinpublic

@@ -8,7 +8,7 @@
 // Hero section ✅
 // USPs / Feautred 
 // Clubs using the app ✅
-// 16:9 text image banner
+// 16:9 text image banner --> Take prop for header, desc, image, buttons
 // Nav bar (maybe sticy)
 
 

@@ -20,7 +20,7 @@ const ImageHeaderTextBlockLeft = ({
             <div
               className="aspect-square bg-gray-200 flex items-center justify-center rounded-lg shadow-sm bg-cover bg-center"
               style={{
-                backgroundImage: "url('/assets/training2.png')",
+                backgroundImage: "url('/assets/training3.png')",
               }}
             ></div>
           </div>

@@ -10,7 +10,7 @@ export default function Home() {
       <Hero />
       <FeaturedClubs />
       <Features />
-      <ImageHeaderTextBlockRight />
+      <ImageHeaderTextBlockRight reverse={true} />
       <ImageHeaderTextBlockLeft />
       {/* <div className="flex flex-col items-center gap-y-4 mt-10">
         <h1 className="head_text">TrainSmartCoach</h1>

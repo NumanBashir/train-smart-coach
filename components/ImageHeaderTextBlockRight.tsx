@@ -1,10 +1,20 @@
 import React from "react";
 
-const ImageHeaderTextBlockRight = () => {
+interface ImageHeaderTextBlockProps {
+  reverse?: boolean;
+}
+
+const ImageHeaderTextBlockRight = ({
+  reverse = false,
+}: ImageHeaderTextBlockProps) => {
   return (
     <div className="w-full py-8 sm:py-12 lg:py-16 xl:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-8 lg:gap-12">
+        <div
+          className={`flex ${
+            reverse ? "flex-col-reverse" : "flex-col"
+          } lg:flex-row items-center justify-between gap-8 lg:gap-12`}
+        >
           {/* Left: Text content */}
           <div className="w-full lg:w-1/2 text-center lg:text-left">
             <h2 className="text-2xl sm:text-3xl lg:text-3xl xl:text-5xl font-bold tracking-tight text-gray-900 leading-tight">

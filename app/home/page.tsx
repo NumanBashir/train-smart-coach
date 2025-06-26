@@ -12,18 +12,13 @@ export default function HomePage() {
     if (status === "unauthenticated") {
       router.push("/login");
     }
-  }, [status, router]);
+  }, [status]);
 
-  if (status === "loading") {
-    return <div>Loading...</div>;
-  }
+  if (status === "loading") return <p>Loading...</p>;
 
   return (
-    <div className="p-6">
-      <h1 className="text-2xl font-bold">
-        Welcome back, {session?.user?.email}!
-      </h1>
-      {/* your app content */}
+    <div>
+      <h1>Welcome, {session?.user?.email}</h1>
     </div>
   );
 }

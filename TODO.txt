@@ -10,6 +10,7 @@
 // Clubs using the app ✅
 // 16:9 text image banner --> Take prop for header, desc, image, buttons
 // Nav bar (maybe sticy)
+// Optimize links/redirects/images to use Next native
 
 
 Nusuq5Z77xBPXz57

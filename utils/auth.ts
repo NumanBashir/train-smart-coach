@@ -3,8 +3,6 @@ import Credentials from "next-auth/providers/credentials";
 import { connectToMONGO } from "@/utils/database";
 import { User } from "@/models/User";
 import { verifyPassword } from "@/utils/password";
-import { redirect } from "next/dist/server/api-utils";
-
 const authOptions = {
   providers: [
     Credentials({

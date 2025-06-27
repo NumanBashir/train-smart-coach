@@ -11,6 +11,7 @@
 // 16:9 text image banner --> Take prop for header, desc, image, buttons
     // Unify so that I can set a prop to make it left or right
 // Nav bar (maybe sticy)
+// Optimize links/redirects/images to use Next native
 
 
 Nusuq5Z77xBPXz57

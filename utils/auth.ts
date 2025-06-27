@@ -3,7 +3,6 @@ import Credentials from "next-auth/providers/credentials";
 import { connectToMONGO } from "@/utils/database";
 import { User } from "@/models/User";
 import { verifyPassword } from "@/utils/password";
-
 const authOptions = {
   providers: [
     Credentials({
@@ -46,6 +45,9 @@ const authOptions = {
     async session({ session, token }: { session: any; token: any }) {
       session.user = token.user;
       return session;
+    },
+    async redirect({ url, baseUrl }: { url: any; baseUrl: any }) {
+      return "/home";
     },
   },
   secret: process.env.AUTH_SECRET,

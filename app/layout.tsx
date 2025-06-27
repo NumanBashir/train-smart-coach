@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "@/styles/globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Provider from "@/components/Provider";
 
 export const metadata: Metadata = {
   title: "TrainSmartCoach",
@@ -17,14 +18,16 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="light">
       <body cz-shortcut-listen="true">
-        <div className="main">
-          <div className="gradient" />
-        </div>
-        <main className="app">
-          <Navbar />
-          {children}
-          <Footer />
-        </main>
+        <Provider>
+          <div className="main">
+            <div className="gradient" />
+          </div>
+          <main className="app">
+            <Navbar />
+            {children}
+            <Footer />
+          </main>
+        </Provider>
       </body>
     </html>
   );

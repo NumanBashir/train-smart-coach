@@ -7,3 +7,15 @@ So I had this issue that on mobile device it would be image-image when two block
 Used React props to make sure this is fixed for where I want to use them
 
 #buildinpublic
+
+------------------------------------------------------------------------------------------
+
+Day 12 - User login for TrainSmartCoach ⚽️
+
+✅ User are now able to login to their profile
+✅ Store session in the browser
+✅ Redirect to /home
+
+Now that the session is stored, next step is to show the content for the User!
+
+#buildinpublic

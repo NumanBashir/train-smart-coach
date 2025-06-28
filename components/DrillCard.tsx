@@ -1,22 +1,30 @@
 import React from "react";
 
-const DrillCard = () => {
+interface DrillCardProps {
+  title: string;
+  desc: string;
+  imageUrl: string;
+  onButtonClick?: () => void;
+}
+
+const DrillCard: React.FC<DrillCardProps> = ({
+  title = "Default Title",
+  desc = "No description available",
+  imageUrl = "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
+  onButtonClick = () => console.log("Button clicked"),
+}) => {
   return (
-    <div className="card bg-base-100 w-96 shadow-sm">
+    <div className="card bg-base-100 w-96 shadow-sm my-6">
       <figure>
-        <img
-          src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-          alt="Shoes"
-        />
+        <img src={imageUrl} alt={title} />
       </figure>
       <div className="card-body">
-        <h2 className="card-title">Card Title</h2>
-        <p>
-          A card component has a figure, a body part, and inside body there are
-          title and actions parts
-        </p>
+        <h2 className="card-title">{title}</h2>
+        <p>{desc}</p>
         <div className="card-actions justify-end">
-          <button className="btn btn-primary">Buy Now</button>
+          <button className="btn btn_primary" onClick={onButtonClick}>
+            See more
+          </button>
         </div>
       </div>
     </div>

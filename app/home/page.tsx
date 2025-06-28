@@ -29,7 +29,13 @@ export default function HomePage() {
       <h1 className="text-3xl font-bold text_primary mb-4">
         Welcome, {session?.user?.username}
       </h1>
-      <DrillCard />
+      <DrillCard
+        title={"3v1"}
+        desc={"En øvelse"}
+        imageUrl={
+          "https://bc-storage-eu.ams3.digitaloceanspaces.com/platform/126.svg"
+        }
+      />
     </div>
   );
 }

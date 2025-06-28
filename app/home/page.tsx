@@ -1,5 +1,6 @@
 "use client";
 
+import DrillCard from "@/components/DrillCard";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
@@ -28,6 +29,7 @@ export default function HomePage() {
       <h1 className="text-3xl font-bold text_primary mb-4">
         Welcome, {session?.user?.username}
       </h1>
+      <DrillCard />
     </div>
   );
 }

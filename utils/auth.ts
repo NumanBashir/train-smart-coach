@@ -27,6 +27,7 @@ const authOptions = {
           id: user._id.toString(),
           email: user.email,
           username: user.username,
+          password: user.password,
         };
       },
     }),

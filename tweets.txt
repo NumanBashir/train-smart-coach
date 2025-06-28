@@ -19,3 +19,14 @@ Day 12 - User login for TrainSmartCoach ⚽️
 Now that the session is stored, next step is to show the content for the User!
 
 #buildinpublic
+
+------------------------------------------------------------------------------------------
+
+Day 13 - DrillCard component for TrainSmartCoach ⚽️
+
+✅ New frontend component to show overview of drill
+✅ Props to make each card unique
+
+Next up will be to fetch from the database all drills
+
+#buildinpublic

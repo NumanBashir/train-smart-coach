@@ -14,7 +14,7 @@ const DrillCard: React.FC<DrillCardProps> = ({
   onButtonClick = () => console.log("Button clicked"),
 }) => {
   return (
-    <div className="card bg-base-100 w-96 shadow-sm my-6">
+    <div className="card bg-base-100 w-64 shadow-sm mb-6">
       <figure>
         <img src={imageUrl} alt={title} />
       </figure>

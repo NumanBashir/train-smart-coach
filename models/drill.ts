@@ -120,14 +120,13 @@ drillSchema.pre("save", function (next) {
 
   // Validate bibColorQuantities sum
   for (const eq of this.equipment) {
-    if (
-      eq.name === "Bibs" &&
-      Array.isArray(eq.bibColorQuantities) &&
-      eq.bibColorQuantities.reduce((a, b) => a + b, 0) !== eq.quantity
-    ) {
-      return next(
-        new Error("Sum of bibColorQuantities must equal total Bibs quantity")
-      );
+    if (eq.name === "Bibs" && Array.isArray(eq.bibColorQuantities)) {
+      const bibColorSum = eq.bibColorQuantities.reduce((a, b) => a + b, 0);
+      if (bibColorSum !== eq.quantity) {
+        return next(
+          new Error("Sum of bibColorQuantities must equal total Bibs quantity")
+        );
+      }
     }
   }
 

@@ -36,6 +36,7 @@ Next up will be to fetch from the database all drills
 Day 14 - Show dynamic drills for user in TrainSmartCoach ⚽️
 
 ✅ Show all drills from database to user
+✅ Hover effect on image on card
 ✅ Updated quantities for equipments in model
 ✅ Small redirect from navbar fix
 

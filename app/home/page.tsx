@@ -39,8 +39,8 @@ export default function HomePage() {
   };
 
   const fetchDrills = async () => {
-    const respone = await fetch("/api/drill");
-    const data = await respone.json();
+    const response = await fetch("/api/drill");
+    const data = await response.json();
 
     setAllDrills(data);
   };

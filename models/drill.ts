@@ -73,7 +73,7 @@ const equipmentSchema = new Schema(
     },
     bibColorQuantities: {
       type: [Number],
-      default: [],
+      default: undefined, // Optional, only for Bibs
     },
   },
   { _id: false }

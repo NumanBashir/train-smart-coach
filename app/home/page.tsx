@@ -48,6 +48,9 @@ export default function HomePage() {
       <h1 className="text-3xl font-bold text_primary my-6">
         Welcome, {session?.user?.username}
       </h1>
+      <p className="text-lg text-gray-700 mb-6">
+        Here are some drills to get you started:
+      </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4">
         {allDrills.map((drill, index) => (
           <DrillCard
@@ -61,14 +64,6 @@ export default function HomePage() {
             }
           />
         ))}
-
-        <DrillCard
-          title={"3v1"}
-          desc={"En øvelse"}
-          imageUrl={
-            "https://bc-storage-eu.ams3.digitaloceanspaces.com/platform/126.svg"
-          }
-        />
       </div>
     </div>
   );

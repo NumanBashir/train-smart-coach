@@ -10,7 +10,9 @@ export const connectToMONGO = async () => {
     return;
   }
 
-  const MONGODB_URI = process.env.MONGODB_URI;
+  // const MONGODB_URI = process.env.MONGODB_URI;
+  const MONGODB_URI =
+    "mongodb+srv://sportybashir:Nusuq5Z77xBPXz57@trainsmartcoachcluster.nnjbgfj.mongodb.net/?retryWrites=true&w=majority&appName=TrainSmartCoachCluster";
 
   if (!MONGODB_URI) {
     throw new Error("Missing MONGODB_URI in environment variables");

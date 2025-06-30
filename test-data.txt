@@ -3,3 +3,30 @@ Users
 1234@example.com
 123
 
+Drill body
+
+{
+  "title": "3v3 + 3",
+  "description": "Bib color test version.",
+  "ageGroup": ["10-12"],
+  "category": {
+    "technical": ["Passing"],
+    "tactical": ["Possession"]
+  },
+  "isIndividual": false,
+  "minPlayers": 8,
+  "maxPlayers": 8,
+  "equipment": [
+    {
+      "name": "Bibs",
+      "quantity": 6,
+      "bibColorQuantities": [3, 3]
+    },
+    {
+      "name": "Cones",
+      "quantity": 4
+    }
+  ],
+  "duration": 15,
+  "images": ["https://example.com/drill.png"]
+}

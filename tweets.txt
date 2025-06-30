@@ -30,3 +30,15 @@ Day 13 - DrillCard component for TrainSmartCoach ⚽️
 Next up will be to fetch from the database all drills
 
 #buildinpublic
+
+------------------------------------------------------------------------------------------
+
+Day 14 - Show dynamic drills for user in TrainSmartCoach ⚽️
+
+✅ Show all drills from database to user
+✅ Updated quantities for equipments in model
+✅ Small redirect from navbar fix
+
+Now there is actually some minor value for the user
+
+#buildinpublic

@@ -3,6 +3,7 @@ import React from "react";
 const Navbar = () => {
   return (
     <div className="navbar shadow-sm z-100">
+      {/* This is for mobile view only */}
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -30,6 +31,9 @@ const Navbar = () => {
               <a href="/login">Login</a>
             </li>
             <li>
+              <a href="/home">Home</a>
+            </li>
+            <li>
               <a>Parent</a>
               <ul className="p-2">
                 <li>
@@ -40,20 +44,22 @@ const Navbar = () => {
                 </li>
               </ul>
             </li>
-            <li>
-              <a>Item 3</a>
-            </li>
           </ul>
         </div>
         <a href="/" className="btn btn-ghost text-xl">
           TrainSmartCoach
         </a>
       </div>
+
+      {/* This is for desktop view only */}
       <div className="navbar-end hidden lg:flex">
         {" "}
         <ul className="menu menu-horizontal px-1">
           <li>
             <a href="/login">Login</a>
+          </li>
+          <li>
+            <a href="/home">Home</a>
           </li>
           <li>
             <details>
@@ -67,9 +73,6 @@ const Navbar = () => {
                 </li>
               </ul>
             </details>
-          </li>
-          <li>
-            <a>Item 3</a>
           </li>
         </ul>
       </div>

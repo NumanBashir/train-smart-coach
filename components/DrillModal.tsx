@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 interface Drill {
   title: string;
@@ -14,9 +14,19 @@ interface DrillModalProps {
 const DrillModal: React.FC<DrillModalProps> = ({ drill, onClose }) => {
   if (!drill) return null;
 
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, []);
+
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60">
-      <div className="bg-white rounded-lg w-full max-w-[500px] p-6 relative shadow-lg">
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60"
+      onClick={onClose}
+    >
+      <div className="bg-white rounded-lg w-full max-w-[700px] max-h-[90vh] overflow-y-auto p-6 relative shadow-lg scrollbar-hide">
         <button
           className="absolute top-2 right-3 text-gray-500 hover:text-black text-xl"
           onClick={onClose}

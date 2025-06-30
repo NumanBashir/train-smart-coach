@@ -1,12 +1,15 @@
-// API routes for GET by ID, Update by ID, DELETE by ID
+// API routes for GET by ID, Update by ID, DELETE by ID ✅
 
 // Drill model, 
     // drill size / dimensions
-    // drill number of bib colors (eg. {bib color 1: 4}, {bib color 2: 2} )
+    // drill number of bib colors (eg. {bib color 1: 4}, {bib color 2: 2} ) ✅
+
+// Optimization (drills, images, links, text, users etc)
+    // Clean out things that requires manual work and takes time
 
 // Brand setting globals.css
 
-// Next Auth / Auth.js
+// Next Auth / Auth.js ✅
 
 // Build out landing page
 // Hero section ✅

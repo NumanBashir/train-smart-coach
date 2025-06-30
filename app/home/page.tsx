@@ -1,6 +1,7 @@
 "use client";
 
 import DrillCard from "@/components/DrillCard";
+import DrillModal from "@/components/DrillModal";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -22,7 +23,20 @@ interface Drill {
 export default function HomePage() {
   const { data: session, status } = useSession();
   const router = useRouter();
+
   const [allDrills, setAllDrills] = useState<Drill[]>([]);
+  const [selectedDrill, setSelectedDrill] = useState<Drill | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleDrillClick = (drill: Drill) => {
+    setSelectedDrill(drill);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedDrill(null);
+  };
 
   const fetchDrills = async () => {
     const respone = await fetch("/api/drill");
@@ -62,8 +76,12 @@ export default function HomePage() {
                 ? drill.images[0]
                 : "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
             }
+            onClick={() => handleDrillClick(drill)}
           />
         ))}
+        {isModalOpen && selectedDrill && (
+          <DrillModal drill={selectedDrill} onClose={handleCloseModal} />
+        )}
       </div>
     </div>
   );

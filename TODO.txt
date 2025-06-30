@@ -1,5 +1,9 @@
 // API routes for GET by ID, Update by ID, DELETE by ID
 
+// Drill model, 
+    // drill size / dimensions
+    // drill number of bib colors (eg. {bib color 1: 4}, {bib color 2: 2} )
+
 // Brand setting globals.css
 
 // Next Auth / Auth.js

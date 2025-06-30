@@ -66,7 +66,15 @@ const equipmentSchema = new Schema(
       enum: ["Cones", "Bibs", "Small goals", "Agility ladder"],
       required: true,
     },
-    quantity: { type: Number, min: 1, default: 1 },
+    quantity: {
+      type: Number,
+      required: true,
+      min: 1,
+    },
+    bibColorQuantities: {
+      type: [Number],
+      default: [],
+    },
   },
   { _id: false }
 );
@@ -109,6 +117,20 @@ drillSchema.pre("save", function (next) {
   if (this.maxPlayers && this.minPlayers > this.maxPlayers) {
     return next(new Error("minPlayers cannot be greater than maxPlayers"));
   }
+
+  // Validate bibColorQuantities sum
+  for (const eq of this.equipment) {
+    if (
+      eq.name === "Bibs" &&
+      Array.isArray(eq.bibColorQuantities) &&
+      eq.bibColorQuantities.reduce((a, b) => a + b, 0) !== eq.quantity
+    ) {
+      return next(
+        new Error("Sum of bibColorQuantities must equal total Bibs quantity")
+      );
+    }
+  }
+
   next();
 });
 

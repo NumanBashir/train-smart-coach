@@ -41,7 +41,9 @@ const DrillModal: React.FC<DrillModalProps> = ({ drill, onClose }) => {
             className="w-full h-auto rounded mb-4"
           />
         )}
-        <p className="text-gray-700 leading-relaxed">{drill.description}</p>
+        <p className="whitespace-pre-line text-gray-700 leading-relaxed">
+          {drill.description}
+        </p>
       </div>
     </div>
   );

@@ -43,3 +43,17 @@ Day 14 - Show dynamic drills for user in TrainSmartCoach ⚽️
 Now there is actually some minor value for the user
 
 #buildinpublic
+
+------------------------------------------------------------------------------------------
+
+Day 15 - DrillModal for showing details of Drill in TrainSmartCoach ⚽️
+
+✅ Open a modal/pop-up to see drill details
+✅ Lock scrollable in background when open modal
+✅ Minor UX fix by closing modal on clicking outside of modal
+✅ Fix image width inside modal
+✅ Scrollable inside modal
+
+So far this only shows same basic information about the drill, next up more details in modal!
+
+#buildinpublic

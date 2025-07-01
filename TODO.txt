@@ -1,10 +1,12 @@
+// Role-Based Access Control
+
 // API routes for GET by ID, Update by ID, DELETE by ID ✅
 
 // Drill model, 
     // drill size / dimensions
     // drill number of bib colors (eg. {bib color 1: 4}, {bib color 2: 2} ) ✅
 
-// Optimization (drills, images, links, text, users etc)
+// Optimization (drills, images, links, text, users, footer, navbar etc)
     // Clean out things that requires manual work and takes time
 
 // Brand setting globals.css

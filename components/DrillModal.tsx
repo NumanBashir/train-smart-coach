@@ -1,9 +1,28 @@
 import React, { useEffect } from "react";
 
+interface Category {
+  technical: string[];
+  tactical: string[];
+  physical: string[];
+  gameSituations: string[];
+}
+
+interface Equipment {
+  name: string;
+  quantity: number;
+  bibColorQuantities: number[];
+}
+
 interface Drill {
   title: string;
   description: string;
   images: string[];
+  ageGroup: string[];
+  category: Category;
+  minPlayers: number;
+  maxPlayers: number;
+  equipment: Equipment[];
+  duration: number;
 }
 
 interface DrillModalProps {
@@ -41,6 +60,65 @@ const DrillModal: React.FC<DrillModalProps> = ({ drill, onClose }) => {
             className="w-full h-auto rounded mb-4"
           />
         )}
+        <div className="text-gray-700 font-bold">
+          Age Group:{" "}
+          <span className="font-normal">{drill.ageGroup.join(", ")}</span>
+        </div>
+        {drill.category.technical.length > 0 && (
+          <p className="text-gray-700 font-bold">
+            Technical:{" "}
+            <span className="font-normal">
+              {drill.category.technical.join(", ")}
+            </span>
+          </p>
+        )}
+        {drill.category.tactical.length > 0 && (
+          <p className="text-gray-700 font-bold">
+            Tactical:{" "}
+            <span className="font-normal">
+              {drill.category.tactical.join(", ")}
+            </span>
+          </p>
+        )}
+        {drill.category.physical.length > 0 && (
+          <p className="text-gray-700 font-bold">
+            Physical:{" "}
+            <span className="font-normal">
+              {drill.category.physical.join(", ")}
+            </span>
+          </p>
+        )}
+        {drill.category.gameSituations.length > 0 && (
+          <p className="text-gray-700 font-bold">
+            Game Situations:{" "}
+            <span className="font-normal">
+              {drill.category.gameSituations.join(", ")}
+            </span>
+          </p>
+        )}
+        <p className="text-gray-700 font-bold">
+          Min Players: <span className="font-normal">{drill.minPlayers}</span>
+        </p>
+        <p className="text-gray-700 font-bold">
+          Max Players: <span className="font-normal">{drill.maxPlayers}</span>
+        </p>
+        <p className="text-gray-700 font-bold">
+          Duration:{" "}
+          <span className="font-normal">{drill.duration} minutes</span>
+        </p>
+        {drill.equipment.length > 0 && (
+          <p className="text-gray-700 font-bold">
+            Equipment:{" "}
+            <span className="font-normal">
+              {drill.equipment
+                .map((equipment) => {
+                  return `${equipment.quantity}x ${equipment.name}`;
+                })
+                .join(", ")}
+            </span>
+          </p>
+        )}
+        <hr className="my-4" />
         <p className="whitespace-pre-line text-gray-700 leading-relaxed">
           {drill.description}
         </p>

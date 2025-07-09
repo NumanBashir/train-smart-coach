@@ -13,11 +13,30 @@ interface User {
   password?: string;
 }
 
+interface Category {
+  technical: string[];
+  tactical: string[];
+  physical: string[];
+  gameSituations: string[];
+}
+
+interface Equipment {
+  name: string;
+  quantity: number;
+  bibColorQuantities: number[];
+}
+
 // Has to be same as in model/schema
 interface Drill {
   title: string;
   description: string;
   images: string[];
+  ageGroup: string[];
+  category: Category;
+  minPlayers: number;
+  maxPlayers: number;
+  equipment: Equipment[];
+  duration: number;
 }
 
 export default function HomePage() {

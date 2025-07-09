@@ -57,3 +57,22 @@ Day 15 - DrillModal for showing details of Drill in TrainSmartCoach ⚽️
 So far this only shows same basic information about the drill, next up more details in modal!
 
 #buildinpublic
+
+------------------------------------------------------------------------------------------
+
+UI/UX > Frameworks 
+Your clients do not care about your tech-stack. They care about the UI/UX, why I decided to make my login page better looking for the end-users
+
+Day 16 - Better login screen for TrainSmartCoach ⚽️
+
+✅ Better UI for login page
+
+#buildinpublic
+
+------------------------------------------------------------------------------------------
+
+Day 17 - Drill pop-up show more relevant info for drills for TrainSmartCoach ⚽️
+
+✅ Better UI for Drill pop-ups
+
+#buildinpublic

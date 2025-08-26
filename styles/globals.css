@@ -127,11 +127,11 @@ body {
 }
 
 .btn_secondary {
-  @apply btn bg-[--brand-yellow] text-[#2B4A11] hover:bg-[#f0d359];
+  @apply btn bg-[--brand-yellow] text-[#2B4A11] hover:bg-[#f0d359] border-none outline-none ring-0;
 }
 
 .btn_outline {
-  @apply btn bg-transparent text-[#2B4A11] hover:bg-[#f2fbc6];
+  @apply btn bg-transparent text-[#2B4A11] hover:bg-[#f2fbc6] border-none outline-none ring-0;
 }
 
 .btn_gradient {

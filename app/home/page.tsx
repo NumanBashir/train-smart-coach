@@ -81,9 +81,18 @@ export default function HomePage() {
       <h1 className="text-3xl font-bold text_primary my-6">
         Welcome, {session?.user?.username}
       </h1>
-      <p className="text-lg text-gray-700 mb-6">
-        Here are some drills to get you started:
-      </p>
+      <div className="flex flex-row items-center justify-center gap-4 mb-6">
+        <p className="text-lg text-gray-700">
+          Here are some drills to get you started:
+        </p>
+        <button
+          className="btn btn_secondary"
+          onClick={() => router.push("/create-drill")}
+        >
+          Create New Drill
+        </button>
+      </div>
+
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4">
         {allDrills.map((drill, index) => (
           <DrillCard

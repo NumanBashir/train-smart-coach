@@ -1,6 +1,10 @@
+"use client";
+import { useSession } from "next-auth/react";
 import React from "react";
 
 const Navbar = () => {
+  const { data: session, status } = useSession();
+
   return (
     <div className="navbar shadow-sm z-100">
       {/* This is for mobile view only */}
@@ -27,9 +31,11 @@ const Navbar = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
-            <li>
-              <a href="/login">Login</a>
-            </li>
+            {status === "unauthenticated" ? (
+              <li>
+                <a href="/login">Login</a>
+              </li>
+            ) : null}
             <li>
               <a href="/home">Home</a>
             </li>
@@ -55,9 +61,11 @@ const Navbar = () => {
       <div className="navbar-end hidden lg:flex">
         {" "}
         <ul className="menu menu-horizontal px-1">
-          <li>
-            <a href="/login">Login</a>
-          </li>
+          {status === "unauthenticated" ? (
+            <li>
+              <a href="/login">Login</a>
+            </li>
+          ) : null}
           <li>
             <a href="/home">Home</a>
           </li>

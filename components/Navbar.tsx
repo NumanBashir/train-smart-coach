@@ -40,6 +40,9 @@ const Navbar = () => {
               <a href="/home">Home</a>
             </li>
             <li>
+              <a href="/sessions">Sessions</a>
+            </li>
+            <li>
               <a>Parent</a>
               <ul className="p-2">
                 <li>
@@ -68,6 +71,9 @@ const Navbar = () => {
           ) : null}
           <li>
             <a href="/home">Home</a>
+          </li>
+          <li>
+            <a href="/sessions">Sessions</a>
           </li>
           <li>
             <details>

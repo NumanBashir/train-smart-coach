@@ -163,17 +163,17 @@ const SessionBuilder: React.FC<SessionBuilderProps> = ({
   };
 
   return (
-    <div className="flex flex-col items-center min-h-screen p-6">
-      <div className="w-full max-w-3xl">
+    <div className="flex flex-col items-center min-h-screen p-6 w-full overflow-x-hidden">
+      <div className="w-full max-w-3xl overflow-x-hidden">
         <SessionSummaryHeader
           title={title || "New Session"}
           focus={focus || "Not set"}
           totalDuration={totalDuration}
         />
 
-        <form className="space-y-4">
+        <form className="space-y-4 w-full">
           {/* Title - Required */}
-          <div>
+          <div className="w-full">
             <label className="label">
               <span className="label-text font-medium">
                 Title <span className="text-red-500">*</span>
@@ -183,6 +183,7 @@ const SessionBuilder: React.FC<SessionBuilderProps> = ({
               type="text"
               placeholder="Enter session title"
               className="input input-bordered w-full"
+              style={{ maxWidth: "100%", boxSizing: "border-box" }}
               value={title}
               onChange={(e) => setTitle(e.target.value)}
               required
@@ -190,7 +191,7 @@ const SessionBuilder: React.FC<SessionBuilderProps> = ({
           </div>
 
           {/* Focus - Required */}
-          <div>
+          <div className="w-full">
             <label className="label">
               <span className="label-text font-medium">
                 Focus <span className="text-red-500">*</span>
@@ -200,6 +201,7 @@ const SessionBuilder: React.FC<SessionBuilderProps> = ({
               type="text"
               placeholder="Enter focus area"
               className="input input-bordered w-full"
+              style={{ maxWidth: "100%", boxSizing: "border-box" }}
               value={focus}
               onChange={(e) => setFocus(e.target.value)}
               required
@@ -207,27 +209,34 @@ const SessionBuilder: React.FC<SessionBuilderProps> = ({
           </div>
 
           {/* Notes - Optional */}
-          <div>
+          <div className="w-full">
             <label className="label">
               <span className="label-text font-medium">Notes</span>
             </label>
             <textarea
               placeholder="Add any notes (optional)"
-              className="textarea textarea-bordered w-full"
+              className="textarea textarea-bordered w-full resize-y"
               rows={3}
               value={notes}
               onChange={(e) => setNotes(e.target.value)}
+              style={{
+                maxWidth: "100%",
+                boxSizing: "border-box",
+                wordWrap: "break-word",
+                overflowWrap: "break-word",
+              }}
             />
           </div>
 
           {/* Date/Time - Optional */}
-          <div>
+          <div className="w-full">
             <label className="label">
               <span className="label-text font-medium">Date & Time</span>
             </label>
             <input
               type="datetime-local"
               className="input input-bordered w-full"
+              style={{ maxWidth: "100%", boxSizing: "border-box" }}
               value={dateTime}
               onChange={(e) => setDateTime(e.target.value)}
             />

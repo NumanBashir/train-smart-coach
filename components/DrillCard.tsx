@@ -4,7 +4,7 @@ interface DrillCardProps {
   title: string;
   desc: string;
   imageUrl: string;
-  onClick?: () => void;
+  onClick?: (e?: React.MouseEvent) => void;
 }
 
 const DrillCard: React.FC<DrillCardProps> = ({
@@ -16,7 +16,9 @@ const DrillCard: React.FC<DrillCardProps> = ({
   return (
     <div
       className="card group bg-base-100 w-64 shadow-sm mb-6 cursor-pointer"
-      onClick={onClick}
+      onClick={(e) => {
+        if (onClick) onClick(e);
+      }}
     >
       <figure className="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
         <img
@@ -31,7 +33,14 @@ const DrillCard: React.FC<DrillCardProps> = ({
           {desc.length > 150 ? `${desc.slice(0, 150)}...` : desc}
         </p>
         <div className="card-actions flex-center">
-          <button className="btn btn_primary group-hover:bg-[#2B4A11]">
+          <button
+            type="button"
+            className="btn btn_primary group-hover:bg-[#2B4A11]"
+            onClick={(e) => {
+              e.stopPropagation();
+              if (onClick) onClick();
+            }}
+          >
             See more
           </button>
         </div>

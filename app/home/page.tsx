@@ -91,6 +91,12 @@ export default function HomePage() {
         >
           Create New Drill
         </button>
+        <button
+          className="btn btn_primary"
+          onClick={() => router.push("/sessions")}
+        >
+          My Sessions
+        </button>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4">

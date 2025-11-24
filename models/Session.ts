@@ -10,6 +10,7 @@ const sessionDrillSchema = new Schema(
     duration: {
       type: Number,
       required: true,
+      default: 0,
     },
     order: {
       type: Number,

@@ -3,6 +3,7 @@ import Session from "@/models/Session";
 import { connectToMONGO } from "@/utils/database";
 import { auth } from "@/utils/auth";
 
+// Generate a PDF for a session by id
 export async function GET(
   req: NextRequest,
   props: { params: Promise<{ id: string }> }

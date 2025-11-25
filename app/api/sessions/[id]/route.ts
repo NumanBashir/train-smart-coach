@@ -3,6 +3,7 @@ import Session from "@/models/Session";
 import { connectToMONGO } from "@/utils/database";
 import { auth } from "@/utils/auth";
 
+// Get a single session by id
 export async function GET(
   req: NextRequest,
   props: { params: Promise<{ id: string }> }
@@ -42,6 +43,7 @@ export async function GET(
   }
 }
 
+// Update a session by id
 export async function PUT(
   req: NextRequest,
   props: { params: Promise<{ id: string }> }
@@ -121,6 +123,7 @@ export async function PUT(
   }
 }
 
+// Delete a session by id
 export async function DELETE(
   req: NextRequest,
   props: { params: Promise<{ id: string }> }

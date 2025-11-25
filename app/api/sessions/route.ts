@@ -3,6 +3,7 @@ import Session from "@/models/Session";
 import { connectToMONGO } from "@/utils/database";
 import { auth } from "@/utils/auth";
 
+// Create a new session
 export async function POST(req: NextRequest) {
   try {
     const session = await auth();
@@ -76,6 +77,7 @@ export async function POST(req: NextRequest) {
   }
 }
 
+// Get all sessions for the current user
 export async function GET(req: NextRequest) {
   try {
     const session = await auth();

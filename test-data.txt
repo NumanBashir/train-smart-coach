@@ -1,7 +1,10 @@
 Users
 
-1234@example.com
-123
+{
+  "email": "coach@example.com",
+  "username": "Coach Tony",
+  "password": "superSecure123"
+}
 
 Drill body
 

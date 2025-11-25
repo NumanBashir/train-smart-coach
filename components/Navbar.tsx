@@ -1,9 +1,20 @@
 "use client";
-import { useSession } from "next-auth/react";
+import { signOut, useSession } from "next-auth/react";
 import React from "react";
 
 const Navbar = () => {
-  const { data: session, status } = useSession();
+  const { status } = useSession();
+  const isAuthenticated = status === "authenticated";
+
+  const guestLinks = [
+    { label: "Login", href: "/login" },
+    { label: "Create Account", href: "/register" },
+  ];
+
+  const authLinks = [
+    { label: "Home", href: "/home" },
+    { label: "Sessions", href: "/sessions" },
+  ];
 
   return (
     <div className="navbar shadow-sm z-100">
@@ -31,28 +42,24 @@ const Navbar = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
-            {status === "unauthenticated" ? (
-              <li>
-                <a href="/login">Login</a>
+            {(isAuthenticated ? authLinks : guestLinks).map((link) => (
+              <li key={link.label}>
+                <a href={link.href}>{link.label}</a>
               </li>
-            ) : null}
-            <li>
-              <a href="/home">Home</a>
-            </li>
-            <li>
-              <a href="/sessions">Sessions</a>
-            </li>
-            <li>
-              <a>Parent</a>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </li>
+            ))}
+            {isAuthenticated && (
+              <li>
+                <a
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    signOut({ callbackUrl: "/login" });
+                  }}
+                >
+                  Log out
+                </a>
+              </li>
+            )}
           </ul>
         </div>
         <a href="/" className="btn btn-ghost text-xl">
@@ -64,30 +71,24 @@ const Navbar = () => {
       <div className="navbar-end hidden lg:flex">
         {" "}
         <ul className="menu menu-horizontal px-1">
-          {status === "unauthenticated" ? (
-            <li>
-              <a href="/login">Login</a>
+          {(isAuthenticated ? authLinks : guestLinks).map((link) => (
+            <li key={link.label}>
+              <a href={link.href}>{link.label}</a>
             </li>
-          ) : null}
-          <li>
-            <a href="/home">Home</a>
-          </li>
-          <li>
-            <a href="/sessions">Sessions</a>
-          </li>
-          <li>
-            <details>
-              <summary>Parent</summary>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </details>
-          </li>
+          ))}
+          {isAuthenticated && (
+            <li>
+              <a
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  signOut({ callbackUrl: "/login" });
+                }}
+              >
+                Log out
+              </a>
+            </li>
+          )}
         </ul>
       </div>
     </div>

@@ -12,12 +12,6 @@ export default function Home() {
       <Features />
       <ImageHeaderTextBlockRight mobileReverse={true} />
       <ImageHeaderTextBlockLeft mobileReverse={false} />
-      {/* <div className="flex flex-col items-center gap-y-4 mt-10">
-        <h1 className="head_text">TrainSmartCoach</h1>
-        <button className="btn_primary">Start Drill</button>
-        <button className="btn_secondary">Add New</button>
-        <button className="btn_outline">View Details</button>
-      </div> */}
     </>
   );
 }

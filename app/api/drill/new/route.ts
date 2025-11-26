@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import Drill from "@/models/drill";
 import { connectToMONGO } from "@/utils/database";
 
+// CREATE a new drill
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();

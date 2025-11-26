@@ -8,7 +8,7 @@ const Navbar = () => {
 
   const guestLinks = [
     { label: "Login", href: "/login" },
-    { label: "Create Account", href: "/register" },
+    { label: "Sign up", href: "/register" },
   ];
 
   const authLinks = [

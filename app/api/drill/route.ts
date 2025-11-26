@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import Drill from "@/models/drill";
 import { connectToMONGO } from "@/utils/database";
 
+// GET all drills
 export async function GET(_req: NextRequest) {
   try {
     await connectToMONGO();
